@@ -1,4 +1,4 @@
-export async function saveToLocal(data) {
+async function saveToLocal(data) {
     try{
         const convertedData = JSON.stringify(data);
         localStorage.setItem("userPosts", convertedData);
@@ -10,6 +10,8 @@ export async function saveToLocal(data) {
         console.log("Failed to save data to localStorage", error);
     }
 }
+
+export default saveToLocal;
 
 saveToLocal([{
     "userId": 1,
